@@ -7,7 +7,7 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/pet/findByStatus?status=pendin"
+  url: "{{baseUrl}}/pet/findByStatus?status=pend"
   params:
     - name: status
 
