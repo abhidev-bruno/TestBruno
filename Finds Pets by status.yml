@@ -10,7 +10,7 @@ http:
   url: "{{baseUrl}}/pet/findByStatus?status=pendin"
   params:
     - name: status
-      value: pendin
+
       type: query
   body:
     type: json
@@ -174,7 +174,7 @@ http:
 runtime:
   variables:
     - name: baseUrl
-      value: https://petstore.swagger.io/v1
+
   scripts:
     - type: after-response
       code: |-
