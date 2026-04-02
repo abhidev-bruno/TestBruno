@@ -10,7 +10,7 @@ http:
   url: "{{baseUrl}}/pet/findByStatus?status=pend"
   params:
     - name: status
-      value: pendin
+      value: pendingg
       type: query
   body:
     type: json
