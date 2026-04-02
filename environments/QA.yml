@@ -1,0 +1,6 @@
+name: QA
+variables:
+  - name: testdummy
+    value: resultant
+  - name: test
+    value: ""

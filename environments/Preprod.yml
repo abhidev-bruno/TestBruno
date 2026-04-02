@@ -1,0 +1,4 @@
+name: Preprod
+variables:
+  - secret: true
+    name: test
