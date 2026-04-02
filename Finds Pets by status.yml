@@ -10,7 +10,7 @@ http:
   url: "{{baseUrl}}/pet/findByStatus?status=pending"
   params:
     - name: status
-      value: pending
+      value: pend
       type: query
   body:
     type: json
@@ -174,7 +174,7 @@ http:
 runtime:
   variables:
     - name: baseUrl
-      value: https://petstore.swagger.io/v2
+      value: https://petstore.swagger.io/v0
   scripts:
     - type: after-response
       code: |-
