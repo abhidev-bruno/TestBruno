@@ -12,4 +12,4 @@ settings:
   encodeUrl: true
   timeout: 0
   followRedirects: true
-  maxRedirects: 5
+  maxRedirects: 1
