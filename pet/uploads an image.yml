@@ -1,0 +1,106 @@
+info:
+  name: uploads an image
+  type: http
+  seq: 2
+  tags:
+    - pet
+
+http:
+  method: POST
+  url: "{{baseUrl}}/pet/:petId/uploadImage"
+  params:
+    - name: petId
+      value: "2"
+      type: path
+      description: ID of pet to update
+  body:
+    type: multipart-form
+    data:
+      - name: file
+        type: file
+        value:
+          - C:\Users\Bruno-AbhiDev\Pictures\Screenshots\Screenshot 2026-03-17 163128.png
+      - name: additionalMetadata
+        type: text
+        value: adfasdfswdfsf
+
+runtime:
+  variables:
+    - name: one
+      value: one
+    - name: one
+      value: one
+  assertions:
+    - expression: res.body.code
+      operator: eq
+      value: "200"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: 200 Response
+    description: successful operation
+    request:
+      url: "{{baseUrl}}/pet/:petId/uploadImage"
+      method: POST
+      params:
+        - name: petId
+          value: ""
+          type: path
+          description: ID of pet to update
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: ""
+
+docs: |-
+  ffsdfsffsfsfsfdsfsfsdsdfsfdfsdfsdfsdfsfsffsfsfssfsdfsdssfdfdfdsfsdfsdfsdfsdfsfsfsfsfsfsfsdfscdsdcsdcsdcsdcsdcdcsdcsdcsdcsdcsdcsdcsscscsdcscsc!!#@%$#%^$^%&*^*)(&)(*_))+{|{:":>"?<?><//./.,/.'';[]\[\]=-=``}}}
+  fsd
+  sf                      asadasdasdsdas
+  sf
+  sfs
+  fsf
+  df
+  fs
+  ff
+  sdf
+  sdfsd
+  fs
+  fs
+  fsf
+
+
+
+
+
+
+
+
+  sdf
+  sdf
+  sdf
+  sd
+  fsdf
+  sf
+  sdf
+  sdf
+  sf
+
+  fsd
+  fsd
+  f
+  fsf
+
+  fsf
+  sfs
+  fs
+  fs
+  fsf
+  sf
+  s

@@ -1,0 +1,68 @@
+info:
+  name: Deletes a pet
+  type: http
+  seq: 8
+  tags:
+    - pet
+
+http:
+  method: DELETE
+  url: "{{baseUrl}}/pet/:petId"
+  headers:
+    - name: api_key
+      value: ""
+      disabled: true
+  params:
+    - name: petId
+      value: "1"
+      type: path
+      description: Pet id to delete
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: 400 Response
+    description: Invalid ID supplied
+    request:
+      url: "{{baseUrl}}/pet/:petId"
+      method: DELETE
+      headers:
+        - name: api_key
+          value: ""
+          disabled: true
+      params:
+        - name: petId
+          value: ""
+          type: path
+          description: Pet id to delete
+    response:
+      status: 400
+      statusText: Bad Request
+      body:
+        type: text
+        data: ""
+  - name: 404 Response
+    description: Pet not found
+    request:
+      url: "{{baseUrl}}/pet/:petId"
+      method: DELETE
+      headers:
+        - name: api_key
+          value: ""
+          disabled: true
+      params:
+        - name: petId
+          value: ""
+          type: path
+          description: Pet id to delete
+    response:
+      status: 404
+      statusText: Not Found
+      body:
+        type: text
+        data: ""

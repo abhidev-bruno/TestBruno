@@ -1,0 +1,83 @@
+info:
+  name: Updates a pet in the store with form data
+  type: http
+  seq: 7
+  tags:
+    - pet
+
+http:
+  method: POST
+  url: "{{baseUrl}}/pet/:petId"
+  params:
+    - name: petId
+      value: ""
+      type: path
+      description: ID of pet that needs to be updated
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: 405 Response
+    description: Invalid input
+    request:
+      url: "{{baseUrl}}/pet/:petId"
+      method: POST
+      params:
+        - name: petId
+          value: ""
+          type: path
+          description: ID of pet that needs to be updated
+    response:
+      status: 405
+      statusText: Method Not Allowed
+      body:
+        type: text
+        data: ""
+
+docs: |-
+  fsdfsefsfs
+  dsd
+  as
+  csd
+  sd
+  sdsd
+  fsd
+  fds
+  fsd
+  fsd
+  fsd
+  fsdf
+  dsf
+  sfds
+  f
+  sdfs
+  fds
+  fdsf
+  dsf
+  sdfsd
+  fsd
+  fsd
+  fdsf
+  dsf
+  dsfd
+  sfs
+  fdsf
+  sdf
+  sdf
+  dsfd
+  sf
+  fd
+  fsf
+  dsf
+  ds
+  dsf
+  dfsds
+  fds
+  fsd
+  fds
+  fsd

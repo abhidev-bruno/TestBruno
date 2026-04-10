@@ -1,0 +1,5 @@
+name: PreProd
+color: "#346AB2"
+variables:
+  - secret: true
+    name: testdummy

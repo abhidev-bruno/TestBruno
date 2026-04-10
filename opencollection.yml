@@ -1,0 +1,81 @@
+opencollection: 1.0.0
+
+info:
+  name: Swagger Petstore
+config:
+  proxy:
+    inherit: true
+    config:
+      protocol: http
+      hostname: ""
+      port: ""
+      auth:
+        username: ""
+        password: ""
+      bypassProxy: ""
+
+request:
+  variables:
+    - name: baseUrl
+      value: https://petstore.swagger.io/v2
+  actions:
+    - type: set-variable
+      phase: after-response
+      selector:
+        expression: "0"
+        method: jsonq
+      variable:
+        name: retryRequestCounterVar
+        scope: runtime
+
+docs:
+  content: |
+    dfsd
+    fsdf
+    sf
+    sd
+    s
+    fsdf
+    dsf
+    sdf
+    sdfs
+    dfds
+    fsd
+    fsdf
+    dsf
+    ds
+    fsd
+    f
+    sdf
+    sdf
+    sdf
+    s
+    f
+    sdf
+    sdf
+    sd
+    fsd
+    fsd
+    fsd
+    fsd
+    fds
+    fsd
+    fsdf
+    sf
+    sf
+    sdfsd
+    s
+    ff
+    sf
+    fds
+    fsd
+    sfd
+    sf
+    sdfs
+  type: text/markdown
+bundled: false
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git

@@ -1,0 +1,289 @@
+info:
+  name: Returns pet inventories by status
+  type: http
+  seq: 1
+  tags:
+    - store
+
+http:
+  method: GET
+  url: "{{baseUrl}}/store/inventory"
+  body:
+    type: xml
+    data: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r
+
+      <Request id=\"req_9f8c7a6b5e4d3c2b1a\" timestamp=\"2026-03-23T10:45:12Z\">\r
+
+      \    <Source>\r
+
+      \        <Platform>web</Platform>\r
+
+      \        <AppVersion>5.2.1</AppVersion>\r
+
+      \        <IPAddress>192.168.1.1</IPAddress>\r
+
+      \        <Location>\r
+
+      \            <Country>India</Country>\r
+
+      \            <State>Karnataka</State>\r
+
+      \            <City>Bengaluru</City>\r
+
+      \            <Coordinates lat=\"12.9716\" lng=\"77.5946\"/>\r
+
+      \        </Location>\r
+
+      \    </Source>\r
+
+      \    <User userId=\"usr_123456789\" isActive=\"true\">\r
+
+      \        <Name>\r
+
+      \            <First>Rahul</First>\r
+
+      \            <Last>Sharma</Last>\r
+
+      \        </Name>\r
+
+      \        <Email>rahul.sharma@example.com</Email>\r
+
+      \        <Phone>+91-9876543210</Phone>\r
+
+      \        <DateOfBirth>1995-08-15</DateOfBirth>\r
+
+      \        <Roles>\r
+
+      \            <Role>customer</Role>\r
+
+      \            <Role>beta_tester</Role>\r
+
+      \        </Roles>\r
+
+      \        <Preferences>\r
+
+      \            <Language>en</Language>\r
+
+      \            <Currency>INR</Currency>\r
+
+      \            <Theme>dark</Theme>\r
+
+      \            <Notifications email=\"true\" sms=\"false\" push=\"true\"/>\r
+
+      \        </Preferences>\r
+
+      \        <Addresses>\r
+
+      \            <Address type=\"home\" isDefault=\"true\">\r
+
+      \                <Line1>123 MG Road</Line1>\r
+
+      \                <Line2>Near Metro Station</Line2>\r
+
+      \                <City>Bengaluru</City>\r
+
+      \                <State>Karnataka</State>\r
+
+      \                <PostalCode>560001</PostalCode>\r
+
+      \                <Country>India</Country>\r
+
+      \            </Address>\r
+
+      \            <Address type=\"work\" isDefault=\"false\">\r
+
+      \                <Line1>456 Tech Park</Line1>\r
+
+      \                <Line2>Whitefield</Line2>\r
+
+      \                <City>Bengaluru</City>\r
+
+      \                <State>Karnataka</State>\r
+
+      \                <PostalCode>560066</PostalCode>\r
+
+      \                <Country>India</Country>\r
+
+      \            </Address>\r
+
+      \        </Addresses>\r
+
+      \    </User>\r
+
+      \    <Order orderId=\"ord_987654321\" status=\"processing\" currency=\"INR\">\r
+
+      \        <CreatedAt>2026-03-23T10:40:00Z</CreatedAt>\r
+
+      \        <Items>\r
+
+      \            <Item>\r
+
+      \                <ProductId>prod_001</ProductId>\r
+
+      \                <Name>Wireless Mouse</Name>\r
+
+      \                <Category>electronics</Category>\r
+
+      \                <Quantity>2</Quantity>\r
+
+      \                <Price>799.99</Price>\r
+
+      \                <Discount type=\"percentage\">10</Discount>\r
+
+      \                <Tags>\r
+
+      \                    <Tag>accessories</Tag>\r
+
+      \                    <Tag>wireless</Tag>\r
+
+      \                    <Tag>office</Tag>\r
+
+      \                </Tags>\r
+
+      \            </Item>\r
+
+      \            <Item>\r
+
+      \                <ProductId>prod_002</ProductId>\r
+
+      \                <Name>Mechanical Keyboard</Name>\r
+
+      \                <Category>electronics</Category>\r
+
+      \                <Quantity>1</Quantity>\r
+
+      \                <Price>3499.50</Price>\r
+
+      \                <Discount xsi:nil=\"true\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"/>\r
+
+      \                <Tags>\r
+
+      \                    <Tag>keyboard</Tag>\r
+
+      \                    <Tag>gaming</Tag>\r
+
+      \                </Tags>\r
+
+      \            </Item>\r
+
+      \        </Items>\r
+
+      \        <Pricing>\r
+
+      \            <Subtotal>5099.48</Subtotal>\r
+
+      \            <Tax>917.91</Tax>\r
+
+      \            <Shipping>150.00</Shipping>\r
+
+      \            <DiscountTotal>589.95</DiscountTotal>\r
+
+      \            <GrandTotal>5577.44</GrandTotal>\r
+
+      \        </Pricing>\r
+
+      \        <Payment method=\"credit_card\" paid=\"true\">\r
+
+      \            <TransactionId>txn_abc123xyz</TransactionId>\r
+
+      \            <PaidAt>2026-03-23T10:42:30Z</PaidAt>\r
+
+      \        </Payment>\r
+
+      \        <Shipping method=\"express\">\r
+
+      \            <Carrier>Delhivery</Carrier>\r
+
+      \            <TrackingNumber>DLV123456789</TrackingNumber>\r
+
+      \            <EstimatedDelivery>2026-03-26</EstimatedDelivery>\r
+
+      \            <Address>\r
+
+      \                <Line1>123 MG Road</Line1>\r
+
+      \                <Line2>Near Metro Station</Line2>\r
+
+      \                <City>Bengaluru</City>\r
+
+      \                <State>Karnataka</State>\r
+
+      \                <PostalCode>560001</PostalCode>\r
+
+      \                <Country>India</Country>\r
+
+      \            </Address>\r
+
+      \        </Shipping>\r
+
+      \    </Order>\r
+
+      \    <Metadata priority=\"high\" retryCount=\"0\">\r
+
+      \        <Tags>\r
+
+      \            <Tag>test</Tag>\r
+
+      \            <Tag>bulk_request</Tag>\r
+
+      \            <Tag>api_v2</Tag>\r
+
+      \        </Tags>\r
+
+      \        <Flags>\r
+
+      \            <IsTest>true</IsTest>\r
+
+      \            <RequiresAudit>false</RequiresAudit>\r
+
+      \            <IsInternational>false</IsInternational>\r
+
+      \        </Flags>\r
+
+      \    </Metadata>\r
+
+      \    <AuditTrail>\r
+
+      \        <Event>\r
+
+      \            <Action>created</Action>\r
+
+      \            <PerformedBy>system</PerformedBy>\r
+
+      \            <Timestamp>2026-03-23T10:40:00Z</Timestamp>\r
+
+      \        </Event>\r
+
+      \        <Event>\r
+
+      \            <Action>payment_completed</Action>\r
+
+      \            <PerformedBy>payment_gateway</PerformedBy>\r
+
+      \            <Timestamp>2026-03-23T10:42:30Z</Timestamp>\r
+
+      \        </Event>\r
+
+      \    </AuditTrail>\r
+
+      </Request>"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: 200 Response
+    description: successful operation
+    request:
+      url: "{{baseUrl}}/store/inventory"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: ""

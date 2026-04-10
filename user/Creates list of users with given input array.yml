@@ -1,0 +1,29 @@
+info:
+  name: Creates list of users with given input array
+  type: http
+  seq: 1
+  tags:
+    - user
+
+http:
+  method: POST
+  url: "{{baseUrl}}/user/createWithList"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: default Response
+    description: successful operation
+    request:
+      url: "{{baseUrl}}/user/createWithList"
+      method: POST
+    response:
+      statusText: Unknown
+      body:
+        type: text
+        data: ""

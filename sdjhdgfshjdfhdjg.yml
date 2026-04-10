@@ -1,0 +1,21 @@
+info:
+  name: sdjhdgfshjdfhdjg
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: adfadfsadfds
+  body:
+    type: multipart-form
+    data:
+      - name: dasdasdsad
+        type: text
+        value: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

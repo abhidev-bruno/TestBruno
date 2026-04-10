@@ -1,0 +1,50 @@
+info:
+  name: pet
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit
+
+docs:
+  content: |-
+    rgdsfgdfsg
+    fdgdfgdfg
+    fdg
+    dfgdf
+    gfg
+    dg
+    dfgdf
+    g
+    dfg
+    df
+    gdf
+    gdf
+    g
+    df
+    gdf
+    gdf
+    gdf
+    dg
+    dg
+    fdg
+    dgdf
+    gdf
+    gdf
+    gdg
+    dfg
+    dg
+    dgdf
+    gd
+    gfg
+    fdg
+    dfg
+    dg
+    dfg
+    dg
+    dfg
+    df
+    gd
+    gdf
+    g
+  type: text/markdown

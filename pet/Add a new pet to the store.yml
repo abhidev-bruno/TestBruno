@@ -1,0 +1,144 @@
+info:
+  name: Add a new pet to the store
+  type: http
+  seq: 2
+  tags:
+    - pet
+    - newpet
+
+http:
+  method: POST
+  url: "{{baseUrl}}/pet"
+  headers:
+    - name: accept
+      value: application/json
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "id":0,
+        "category": {
+          "id": 0,
+          "name": "string"
+        },
+        "name": "doggie",
+        "photoUrls": [
+          "string"
+        ],
+        "tags": [
+          {
+            "id": 0,
+            "name": "string"
+          }
+        ],
+        "status": "available"
+      }
+  auth: inherit
+
+runtime:
+  variables:
+    - name: baseUrl
+      value: https://petstore.swagger.io/v2
+  scripts:
+    - type: tests
+      code: |-
+        test("Status code is 200", () => {
+          expect(res.status).to.equal(200);
+        });
+
+        test("Response time < 500ms", () => {
+          expect(res.responseTime).to.be.below(500);
+        });
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: 405 Response
+    description: Invalid input
+    request:
+      url: "{{baseUrl}}/pet"
+      method: POST
+    response:
+      status: 405
+      statusText: Method Not Allowed
+      body:
+        type: text
+        data: ""
+  - name: exampleregress
+    description: describeregress
+    request:
+      url: "{{baseUrl}}/pet"
+      method: POST
+      headers:
+        - name: accept
+          value: application/json
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "id":0,
+            "category": {
+              "id": 0,
+              "name": "string"
+            },
+            "name": "doggie",
+            "photoUrls": [
+              "string"
+            ],
+            "tags": [
+              {
+                "id": 0,
+                "name": "string"
+              }
+            ],
+            "status": "available"
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: date
+          value: Fri, 10 Apr 2026 06:47:34 GMT
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: access-control-allow-origin
+          value: "*"
+        - name: access-control-allow-methods
+          value: GET, POST, DELETE, PUT
+        - name: access-control-allow-headers
+          value: Content-Type, api_key, Authorization
+        - name: server
+          value: Jetty(9.2.9.v20150224)
+      body:
+        type: json
+        data: |-
+          {
+            "id": 9223372036854775807,
+            "category": {
+              "id": 0,
+              "name": "string"
+            },
+            "name": "doggie",
+            "photoUrls": [
+              "string"
+            ],
+            "tags": [
+              {
+                "id": 0,
+                "name": "string"
+              }
+            ],
+            "status": "available"
+          }
