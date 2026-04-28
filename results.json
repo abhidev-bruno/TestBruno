@@ -1,0 +1,96 @@
+[
+  {
+    "iterationIndex": 0,
+    "results": [
+      {
+        "test": {
+          "filename": "pet\\Add a new pet to the store.yml"
+        },
+        "request": {
+          "method": "POST",
+          "url": "https://petstore.swagger.io/v2/pet",
+          "headers": {
+            "accept": "application/json",
+            "Content-Type": "application/json"
+          },
+          "data": "{\n  \"id\": 0,\n  \"category\": {\n    \"id\": 0,\n    \"name\": \"string\"\n  },\n  \"name\": \"{{petName}}\",\n  \"photoUrls\": [\n    \"string\"\n  ],\n  \"tags\": [\n    {\n      \"id\": 0,\n      \"name\": \"string\"\n    }\n  ],\n  \"status\": \"available\"\n}"
+        },
+        "response": {
+          "status": 200,
+          "statusText": "OK",
+          "headers": {
+            "date": "Mon, 20 Apr 2026 09:20:10 GMT",
+            "content-type": "application/json",
+            "transfer-encoding": "chunked",
+            "connection": "close",
+            "access-control-allow-origin": "*",
+            "access-control-allow-methods": "GET, POST, DELETE, PUT",
+            "access-control-allow-headers": "Content-Type, api_key, Authorization",
+            "server": "Jetty(9.2.9.v20150224)"
+          },
+          "data": {
+            "id": 9223372036854776000,
+            "category": {
+              "id": 0,
+              "name": "string"
+            },
+            "name": "{{petName}}",
+            "photoUrls": [
+              "string"
+            ],
+            "tags": [
+              {
+                "id": 0,
+                "name": "string"
+              }
+            ],
+            "status": "available"
+          },
+          "url": "https://petstore.swagger.io/v2/pet",
+          "responseTime": 1582
+        },
+        "error": null,
+        "status": "pass",
+        "assertionResults": [],
+        "testResults": [
+          {
+            "description": "Status code is 200",
+            "status": "pass",
+            "uid": "48ogwACrW14k_G2RH_IEU"
+          },
+          {
+            "description": "Response time < 2000ms",
+            "status": "pass",
+            "uid": "SMxsUYQUfzqqKn7C9sh-1"
+          }
+        ],
+        "preRequestTestResults": [],
+        "postResponseTestResults": [],
+        "shouldStopRunnerExecution": false,
+        "runDuration": 1.8353454999999999,
+        "name": "Add a new pet to the store",
+        "path": "pet\\Add a new pet to the store.yml",
+        "iterationIndex": 0
+      }
+    ],
+    "summary": {
+      "totalRequests": 1,
+      "passedRequests": 1,
+      "failedRequests": 0,
+      "errorRequests": 0,
+      "skippedRequests": 0,
+      "totalAssertions": 0,
+      "passedAssertions": 0,
+      "failedAssertions": 0,
+      "totalTests": 2,
+      "passedTests": 2,
+      "failedTests": 0,
+      "totalPreRequestTests": 0,
+      "passedPreRequestTests": 0,
+      "failedPreRequestTests": 0,
+      "totalPostResponseTests": 0,
+      "passedPostResponseTests": 0,
+      "failedPostResponseTests": 0
+    }
+  }
+]

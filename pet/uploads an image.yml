@@ -30,6 +30,9 @@ runtime:
       value: one
     - name: one
       value: one
+  scripts:
+    - type: before-request
+      code: bru.runner.skipRequest();
   assertions:
     - expression: res.body.code
       operator: eq

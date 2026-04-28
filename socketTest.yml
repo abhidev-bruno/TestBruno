@@ -1,0 +1,12 @@
+info:
+  name: socketTest
+  type: websocket
+  seq: 11
+
+websocket:
+  url: wss://demo.piesocket.com/v3/channel_123?api_key=YOUR_API_KEY&notify_self=1
+  auth: inherit
+
+settings:
+  timeout: 0
+  keepAliveInterval: 0

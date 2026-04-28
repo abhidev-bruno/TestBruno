@@ -15,9 +15,6 @@ config:
       bypassProxy: ""
 
 request:
-  variables:
-    - name: baseUrl
-      value: https://petstore.swagger.io/v2
   actions:
     - type: set-variable
       phase: after-response

@@ -1,0 +1,28 @@
+info:
+  name: digest
+  type: http
+  seq: 13
+
+http:
+  method: post
+  url: https://example.com/api/data
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "name": "test",
+        "value": 123
+      }
+  auth:
+    type: digest
+    username: username
+    password: password
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

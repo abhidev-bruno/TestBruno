@@ -1,5 +1,5 @@
 name: QA
 color: "#C77A0F"
 variables:
-  - secret: true
-    name: testdummy
+  - name: petName
+    value: doggie

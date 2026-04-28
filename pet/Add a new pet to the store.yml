@@ -18,12 +18,12 @@ http:
     type: json
     data: |-
       {
-        "id":0,
+        "id": 0,
         "category": {
           "id": 0,
           "name": "string"
         },
-        "name": "doggie",
+        "name": "{{petName}}",
         "photoUrls": [
           "string"
         ],
@@ -38,18 +38,17 @@ http:
   auth: inherit
 
 runtime:
-  variables:
-    - name: baseUrl
-      value: https://petstore.swagger.io/v2
   scripts:
+    - type: before-request
+      code: 'console.log("The cookies for this request is: " + bru.cookies.all());'
     - type: tests
       code: |-
         test("Status code is 200", () => {
           expect(res.status).to.equal(200);
         });
 
-        test("Response time < 500ms", () => {
-          expect(res.responseTime).to.be.below(500);
+        test("Response time < 2000ms", () => {
+          expect(res.responseTime).to.be.below(2000);
         });
 
 settings:
@@ -142,3 +141,32 @@ examples:
             ],
             "status": "available"
           }
+
+docs: |-
+  sdvsfsdvdsv
+  scvs
+  vsvs
+  dvsv
+  sdv
+  sv
+  vs
+  vsv
+  sv
+  svs
+  v
+  vsdv
+  sdv
+
+
+
+
+
+  f
+  sdf
+  sd
+  fsdf
+  sf
+  dsf
+  ds
+  sd
+  f

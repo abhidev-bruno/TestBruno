@@ -1,0 +1,10 @@
+info:
+  name: wwfwefwefwe
+  type: grpc
+  seq: 12
+
+grpc:
+  url: wfwfwffwf
+  method: ""
+  message: "{}"
+  auth: inherit
