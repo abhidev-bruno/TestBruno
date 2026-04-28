@@ -1,7 +1,7 @@
 opencollection: 1.0.0
 
 info:
-  name: Swagger Petstore
+  name: Swagger Petstore 1
 config:
   proxy:
     inherit: true
